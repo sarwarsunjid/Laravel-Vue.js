@@ -36,12 +36,20 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <router-link to="/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
                 <i class="right fas fa-angle-left"></i>
               </p>
+            </a>
+          </li>
+          <li class="nav-item">
+          <!-- Router link instead of html anchor tag <a> and instead of href to -->
+          <li class="nav-item">
+            <router-link to="/category" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>Manage Category</p>
             </a>
           </li>
           <li class="nav-item">

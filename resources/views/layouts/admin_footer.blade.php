@@ -18,7 +18,8 @@
 <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.js')}}"></script>
-<!-- Scripts -->
+
+<!-- Scripts + Support for vue js -->
 <script src="{{ asset('js/app.js') }}" defer></script>
 
 <!-- PAGE PLUGINS -->
