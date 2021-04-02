@@ -15,6 +15,14 @@ Vue.use(VueRouter)
     mode:'hash', // short for `routes: routes`
   })
 
+//v form support 
+
+import { Form, HasError, AlertError } from 'vform'
+
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+window.Form = Form;
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 //register new component
