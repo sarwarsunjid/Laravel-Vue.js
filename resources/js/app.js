@@ -45,6 +45,17 @@ const Toast = Swal.mixin({
 
 window.Toast = Toast;
 
+
+// Vuex support
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+import storeInfo from './store/store';
+
+const store = new Vuex.Store(
+  storeInfo
+)
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 //register new component
@@ -52,6 +63,7 @@ Vue.component('admin-master', require('./components/admin/adminmaster.vue').defa
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store
 });
 
