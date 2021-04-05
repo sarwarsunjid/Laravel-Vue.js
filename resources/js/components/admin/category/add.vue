@@ -86,6 +86,12 @@ export default {
           
           //store data, redirect to url: /category(which is actually category list page)
           this.$router.push('/category');
+          
+          //display message
+          Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
+          })
           }).catch(()=>{
         });
     }
