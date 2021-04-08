@@ -32,20 +32,27 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Category Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer text-center">
-                  <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-                  <button type="submit" class="btn btn-sm btn-danger">Back</button>
-                </div>
-              </form>
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 10px">#</th>
+                      <th>Category Name</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Update software</td>
+                      <td>
+                        <div class="">
+                            <router-link to="" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></router-link>
+                            <router-link to="" class="btn btn-xs btn-danger" ><i class="fa fa-trash"></i></router-link>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
             </div>
             </div>
           </div>
