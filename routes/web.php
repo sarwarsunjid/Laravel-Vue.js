@@ -20,5 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Category Routes
 Route::post('/categorySave', [App\Http\Controllers\HomeController::class, 'store'])->name('home.store');
+
+Route::get('/categoryList', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
+
 //Route::get('/{anypath}', [App\Http\Controllers\HomeController::class, 'index'])->where('home','.*');

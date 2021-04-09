@@ -14,6 +14,8 @@ class CategoryController extends Controller
     public function index()
     {
         //
+        $categoryList = Category::all();
+        return response()->json(['categoryList'=>$categoryList], 200);
     }
 
     /**

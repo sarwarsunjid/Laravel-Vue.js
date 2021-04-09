@@ -41,9 +41,9 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td>Update software</td>
+                    <tr v-for= "(categoryList, index) in getCategoryList" :key= "categoryList.id">
+                      <td>{{index}}</td>
+                      <td>{{categoryList.cat_name}}</td>
                       <td>
                         <div class="">
                             <router-link to="" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></router-link>
@@ -73,11 +73,20 @@
 
 <script>
 export default {
+    name: 'List',
+
+    mounted(){
+      this.$store.dispatch('getCategoryList')
+    },
+    computed:{
+      getCategoryList(){
+        return this.$store.getters.categoryList
+      }
+    },
+
+  methods: {
     
-    
+  }      
 }
 </script>
 
-<style>
-
-</style>
