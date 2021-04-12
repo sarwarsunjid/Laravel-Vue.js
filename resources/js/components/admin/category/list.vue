@@ -42,11 +42,11 @@
                   </thead>
                   <tbody>
                     <tr v-for= "(categoryList, index) in getCategoryList" :key= "categoryList.id">
-                      <td>{{index}}</td>
+                      <td>{{index+1}}</td>
                       <td>{{categoryList.cat_name}}</td>
                       <td>
                         <div class="">
-                            <router-link to="" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></router-link>
+                            <router-link :to="`/editCategory/${categoryList.id}`" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></router-link>
                             <router-link to="" class="btn btn-xs btn-danger" ><i class="fa fa-trash"></i></router-link>
                         </div>
                       </td>

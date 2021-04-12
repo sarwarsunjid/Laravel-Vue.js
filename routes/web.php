@@ -26,4 +26,10 @@ Route::post('/categorySave', [App\Http\Controllers\HomeController::class, 'store
 
 Route::get('/categoryList', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
 
+Route::get('/categoryById/{id}', [App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit');
+
+Route::get('/categoryUpdate/{id}', [App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
+
+
+
 //Route::get('/{anypath}', [App\Http\Controllers\HomeController::class, 'index'])->where('home','.*');
