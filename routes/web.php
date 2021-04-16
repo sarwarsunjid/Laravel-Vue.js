@@ -30,6 +30,7 @@ Route::get('/categoryById/{id}', [App\Http\Controllers\CategoryController::class
 
 Route::get('/categoryUpdate/{id}', [App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
 
+Route::get('/categoryDelete/{id}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy');
 
 
 //Route::get('/{anypath}', [App\Http\Controllers\HomeController::class, 'index'])->where('home','.*');

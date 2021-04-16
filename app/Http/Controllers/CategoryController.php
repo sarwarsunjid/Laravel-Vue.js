@@ -90,10 +90,13 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Category $category, $id)
     {
-        //
+        //Perform Delete
+        Category::destroy($id);
+        return ['status'=>'success'];
     }
+    
     public function formValidation($request){
         $this->validate($request,[
             'cat_name' =>'required',

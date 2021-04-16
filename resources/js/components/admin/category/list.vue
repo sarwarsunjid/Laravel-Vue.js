@@ -47,7 +47,7 @@
                       <td>
                         <div class="">
                             <router-link :to="`/editCategory/${categoryList.id}`" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></router-link>
-                            <router-link to="" class="btn btn-xs btn-danger" ><i class="fa fa-trash"></i></router-link>
+                            <a @click.prevent="categoryDelete(categoryList.id)" class="btn btn-xs btn-danger" ><i class="fa fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>
@@ -85,7 +85,18 @@ export default {
     },
 
   methods: {
-    
+    //pass id to the method
+    categoryDelete(id){
+      axios.get('/categoryDelete/'+id).then((response)=>{
+        //when we get a response, then we will call this method
+        this.$store.dispatch('getCategoryList')
+        //display message
+          Toast.fire({
+            icon: 'success',
+            title: 'Category deleted successfully'
+          })
+      })
+    }
   }      
 }
 </script>
